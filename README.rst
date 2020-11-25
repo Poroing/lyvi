@@ -1,11 +1,21 @@
 Lyvi
 ====
 
-.. image:: https://badges.gitter.im/Join%20Chat.svg
-   :target: https://gitter.im/ok100/lyvi?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
-
 For more information, see http://ok100.github.io/lyvi/
 
+About this Fork
+---------------
+
+This fork came to existence due to the lack of a fix for an issue that appeared
+in the ``setup.py`` script with recent version of ``pip``. More specifically,
+the ``setup.py`` script was based on a function internal to ``pip`` whose
+semantics changed with an update.
+
+Feel free to post issue and suggest pull request to this repository. I'll do
+my best to take them into account.
+
+Installation
+------------
 
 You can install the python dependencies by issuing:
 
@@ -13,7 +23,7 @@ You can install the python dependencies by issuing:
 
     $ sudo pip install -r pip_requirements.txt --use-mirrors
 
-This will also be done for you when issuing the setup.py script.
+This will also be done for you when issuing the ``setup.py`` script.
 
 There are other dependencies that need to be installed separately though:
 
