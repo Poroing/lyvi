@@ -1,20 +1,13 @@
-import uuid
 from setuptools import setup
-try:  # For pip >= 10
-    from pip._internal.req import parse_requirements
-except ImportError:  # For pip < 10
-    from pip.req import parse_requirements
 
-
-# parse_requirements() returns generator of pip.req.InstallRequirement objects
-install_reqs = parse_requirements('pip_requirements.txt', session=uuid.uuid1())
-
+with open('README.rst') as readme_file:
+    long_description = readme_file.read()
 
 setup(
     name='Lyvi',
     version='2.0-git',
     description='Command-line lyrics (and more!) viewer',
-    long_description=open('README.rst').read(),
+    long_description=long_description,
     url='http://ok100.github.io/lyvi/',
     author='Ondrej Kipila',
     author_email='ok100@openmailbox.org',
@@ -25,7 +18,12 @@ setup(
             'lyvi = lyvi:main'
         ]
     },
-    install_requires=[str(ir.req) for ir in install_reqs],
+    install_requires=[
+        'Pillow',
+        'plyr',
+        'urwid',
+        'psutil'
+    ],
     package_data={'lyvi': ['data/pianobar/*']},
     data_files=[('share/man/man1', ['doc/lyvi.1'])]
 )

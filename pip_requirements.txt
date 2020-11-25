@@ -1,6 +1,9 @@
 # PIP requirements file.
 # See here for exact syntax and possible options:
 #    http://www.pip-installer.org/en/latest/cookbook.html
+#
+# When you add requirement here, don't forget to add them to the setup.py.
+
 Pillow
 plyr
 urwid
