@@ -9,8 +9,6 @@ setup(
     description='Command-line lyrics (and more!) viewer',
     long_description=long_description,
     url='http://ok100.github.io/lyvi/',
-    author='Ondrej Kipila',
-    author_email='ok100@openmailbox.org',
     license='WTFPL',
     packages=['lyvi', 'lyvi.players'],
     entry_points={
